@@ -1,0 +1,268 @@
+
+        html {
+            height: 100%;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            
+        }
+
+        #nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            background-color:rgb(0, 0, 0);
+        }
+
+        #nav>h1 {
+            font-weight: bold;
+            font-size: 30px;
+            color: antiquewhite;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+
+        .btn-circle {
+            height: 45px;
+            width: 45px;
+            line-height: 37px;
+            font-size: 38px;
+            text-align: center;
+            border-radius: 100%;
+            color: white;
+            margin-right: 8px;
+            background-color: black;
+        }
+
+        .btn-circle:hover {
+            line-height: 37px;
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 0px #fafbfcbf inset;
+        }
+
+        #container {
+            min-height: 100%;
+            height: auto;
+            box-shadow: 0px 0px 10px 0px #f2dbdb71 inset;
+            background-color: #F7F7F7;
+        }
+
+        #btnContainer {
+            padding-top: 35px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 18px;
+            color: #424242;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+
+        #cardContainer {
+            background: transparent;
+            padding-top: 35px;
+            margin-left: 8%;
+            margin-right: 8%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        #noTasks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(190, 190, 190);
+        }
+
+        .card {
+            box-shadow: 0px 0px 15px 0px #00000089;
+            margin: 10px;
+            min-height: 350px;
+            height: auto;
+            width: 350px;
+            background-color:whitesmoke;
+            border-radius: 10px;
+        }
+
+        .cardHeading {
+            padding: 8px 30px;
+            font-size: 20px;
+            font-weight: 500;
+            background-color:black;
+            color:antiquewhite;
+        }
+
+        .cardHeading:hover {
+            cursor: pointer;
+        }
+
+        .itemContainer {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-top: 18px;
+            color: #424242;
+        }
+
+        input[type=checkbox] {
+            margin-right: 10px;
+            appearance: none;
+            background-color:rgb(188, 200, 198);
+            margin: 0;
+            margin-right: 10px;
+            font: inherit;
+            color: #000000;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            transform: translateY(-0.075em);
+            box-shadow: 0px 0px 10px 0px #4242421f inset;
+            position: flex;
+        }
+
+        input[type="checkbox"]::after {
+            position: absolute;
+            width: 100%;
+            top: 5px;
+            left: 0%;
+            text-align: center;
+            font-family: "FontAwesome";
+            font-weight: bold;
+            content: "\f00c";
+            color: rgb(8, 8, 8);
+            display: inline-block;
+            visibility: hidden;
+        }
+
+        input[type="checkbox"]:hover {
+            background-color: #b3b5b5b0;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: #d8d8d8;
+        }
+
+        input[type="checkbox"]:checked::after {
+            visibility: visible;
+        }
+
+        @keyframes strike {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        .strike {
+            position: relative;
+            color: rgb(180, 180, 180);
+        }
+
+        .strike::after {
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgb(150, 150, 150);
+            animation-name: strike;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        .inputContainer {
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.25);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input {
+            background-color: white;
+            height: 225px;
+            width: 440px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .inputHeading {
+            font-size: 18px;
+            padding: 0px 30px;
+            padding-top: 5px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgb(9, 9, 9);
+        }
+
+        .closeInput {
+            position: absolute;
+            right: 30px;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+        .closeInput:hover {
+            cursor: pointer;
+        }
+
+        .inputContent {
+            padding: 10px 30px;
+        }
+
+        input[type=text] {
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #bfbcbc;
+            outline: none;
+            border: 0;
+            padding: 10px 20px;
+            width: 340px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .btn {
+            outline: none;
+            border: 0;
+            background-color: #000609;
+            color:antiquewhite;
+            font-size: 18px;
+            border-radius: 4px;
+            padding: 10px 25px;
+            font-family: Poppins;
+            margin-top: 20px;
+            position: absolute;
+            right: 30px;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 0px rgba(250, 248, 248, 0.694) inset;
+        }
+  
